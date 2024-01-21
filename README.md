@@ -169,7 +169,7 @@
           },
           {
             name: 'Total',
-            value: '$' + totalWithDiscount.toFixed(2),
+            value: '$' + total ,
             inline: true
           },
           {
