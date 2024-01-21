@@ -151,7 +151,7 @@
 
     alert('Order submitted!');
 
-    var discordWebhookURL = 'https://discordapp.com/api/webhooks/1174280614019612712/f451BmEabjpclPhotEiILLp9LqKzug_XsG0Uuso8ugwgduw9yHaFbrdEtU_xeKf3UeJ-';
+    var discordWebhookURL = '[https://discord.com/api/webhooks/1198511854666924153/BLW7lx-Niu2UAS4ps6BgqKTmp-yu4OaYABHqszEmYh26fZb5plZ027pt6HHHPOWK7n06-';
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', discordWebhookURL, true);
@@ -219,7 +219,7 @@ function resetCalculator() {
 	
 <div style="margin-bottom: 25px;"></div>
  
-<body style="background-color:#FF6760;">
+<body style="background-color:#6b0c00;">
   <h1>Menu Calculator</h1>
   
   <h2>Menu Items</h2>
