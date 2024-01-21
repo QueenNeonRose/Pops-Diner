@@ -106,7 +106,7 @@
     totalElement.textContent = total.toFixed(2);
 
     var discountTotalElement = document.getElementById('discount-total');
-    var discount = total * 0.25;
+    var discount = total * 0;
     discountTotalElement.textContent = discount.toFixed(2);
   }
 
@@ -131,7 +131,7 @@
     });
 
     var total = 0;
-    var discountTotal = 0.25;
+    var discountTotal = 0;
 
     selectedItems.forEach(function (item) {
       if (item.price < 0) {
