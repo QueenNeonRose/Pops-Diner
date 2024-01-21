@@ -179,7 +179,7 @@
           },
           {
             name: 'Commission (50%)',
-            value: '$' + commission,
+            value: '$' + commission - Total,
             inline: true
           },
           {
