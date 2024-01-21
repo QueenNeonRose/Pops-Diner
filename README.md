@@ -91,14 +91,11 @@
       var quantity = parseInt(quantityInput.value);
       var price = parseFloat(checkbox.value);
 
-      if (checkbox.value === '-25%') {
-        var itemPrice = total * 0.25;
+      if (checkbox.value === '-50%') {
+        var itemPrice = total * 0.5;
         total -= itemPrice;
       } else if (checkbox.value === '-30%') {
         var itemPrice = total * 0.3;
-        total -= itemPrice;
-      } else if (checkbox.value === '-50%') {
-        var itemPrice = total * 0.5;
         total -= itemPrice;
       } else {
         total += price * quantity;
@@ -109,7 +106,7 @@
     totalElement.textContent = total.toFixed(2);
 
     var discountTotalElement = document.getElementById('discount-total');
-    var discount = total * 0.25;
+    var discount = total * 0.0;
     discountTotalElement.textContent = discount.toFixed(2);
   }
 
