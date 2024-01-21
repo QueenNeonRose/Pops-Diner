@@ -134,7 +134,7 @@
     });
 
     var total = 0;
-    var discountTotal = 0;
+    var discountTotal = 0.3;
 
     selectedItems.forEach(function (item) {
       if (item.price < 0) {
