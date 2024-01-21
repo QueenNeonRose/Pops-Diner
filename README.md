@@ -109,7 +109,7 @@
     totalElement.textContent = total.toFixed(2);
 
     var discountTotalElement = document.getElementById('discount-total');
-    var discount = total * 0.10;
+    var discount = total * 0.25;
     discountTotalElement.textContent = discount.toFixed(2);
   }
 
@@ -219,7 +219,7 @@ function resetCalculator() {
 	
 <div style="margin-bottom: 25px;"></div>
  
-<body style="background-color:#6b0c00;">
+<body style="background-color:#276dd6;">
   <h1>Menu Calculator</h1>
   
   <h2>Menu Items</h2>
