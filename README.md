@@ -109,7 +109,7 @@
     totalElement.textContent = total.toFixed(2);
 
     var discountTotalElement = document.getElementById('discount-total');
-    var discount = total * 0.5;
+    var discount = total * 0.25;
     discountTotalElement.textContent = discount.toFixed(2);
   }
 
