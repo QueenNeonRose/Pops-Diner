@@ -100,6 +100,9 @@
       } else if (checkbox.value === '-50%') {
         var itemPrice = total * 0.5;
         total -= itemPrice;
+      } else if (checkbox.value === '-10%') {
+        var itemPrice = total * 0.1;
+        total -= itemPrice;
       } else {
         total += price * quantity;
       }
@@ -404,7 +407,7 @@ function resetCalculator() {
   <h3>Specials</h3>
    <div>
     <input type="checkbox" id="Davechoice" value="1350$">
-    <label for="Davechoice">Powdered French Toast - $</label>1350
+    <label for="Davechoice">Pops French Toast - $</label>1350
     <input type="number" value="1" min="1">
   </div>
 
@@ -420,7 +423,13 @@ function resetCalculator() {
 
 <div>
   <input type="checkbox" id="30off" value="-30%">
-  <label for="25off">Mechs/PD & EMS - 30% off</label>
+  <label for="30off">Mechs/PD & EMS - 30% off</label>
+  <input type="number" value="1" min="1" max="1">
+</div>
+
+<div>
+  <input type="checkbox" id="10off" value="-10%">
+  <label for="10off">Valentine Special - 10% off</label>
   <input type="number" value="1" min="1" max="1">
 </div>
 
