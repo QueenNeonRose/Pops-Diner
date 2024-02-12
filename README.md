@@ -104,7 +104,7 @@
         var itemPrice = total * 0.1;
         total -= itemPrice;
       } else {
-        total += price * quantity;
+        total -= price * quantity;
       }
     });
 
