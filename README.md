@@ -98,9 +98,6 @@
     } else if (checkbox.value === '-30%') {
         var itemPrice = total * 0.3;
         total -= itemPrice;
-      } else {
-        total += price * quantity;
-      }
       } else if (checkbox.value === '-50%') {
         var itemPrice = total * 0.5;
         total -= itemPrice;
