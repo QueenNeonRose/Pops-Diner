@@ -92,18 +92,17 @@
       var quantity = parseInt(quantityInput.value);
       var price = parseFloat(checkbox.value);
 
-      if (checkbox.value === '-10%') {
-        var itemPrice = total * 0.10;
+      if (checkbox.value === '-25%') {
+        var itemPrice = total * 0.25;
         total -= itemPrice;
       } else if (checkbox.value === '-30%') {
-        var itemPrice = total * 0.30;
+        var itemPrice = total * 0.3;
         total -= itemPrice;
       } else if (checkbox.value === '-50%') {
-        var itemPrice = total * 0.50;
+        var itemPrice = total * 0.5;
         total -= itemPrice;
       } else {
-       
-	total += price * quantity;
+        total += price * quantity;
       }
     });
 
@@ -427,8 +426,8 @@ function resetCalculator() {
 </div>
 
 <div>
-  <input type="checkbox" id="10off" value="-10%">
-  <label for="10off">Valentine Special - 10% off</label>
+  <input type="checkbox" id="25off" value="-25%">
+  <label for="25off">Valentine Special - 25% off</label>
   <input type="number" value="1" min="1" max="1">
 </div>
 
