@@ -86,35 +86,32 @@
     function calculateTotal() {
     var total = 0;
     var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-
     checkboxes.forEach(function(checkbox) {
       var quantityInput = checkbox.parentNode.querySelector('input[type="number"]');
       var quantity = parseInt(quantityInput.value);
       var price = parseFloat(checkbox.value);
-
       if (checkbox.value === '-25%') {
         var itemPrice = total * 0.25;
         total -= itemPrice;
-    } else if (checkbox.value === '-30%') {
+      } else if (checkbox.value === '-30%') {
         var itemPrice = total * 0.3;
         total -= itemPrice;
       } else if (checkbox.value === '-50%') {
         var itemPrice = total * 0.5;
         total -= itemPrice;
+      } else if (checkbox.value === '-10%') {
+        var itemPrice = total * 0.1;
+        total -= itemPrice;
       } else {
         total += price * quantity;
       }
     });
-
     var totalElement = document.getElementById('total');
     totalElement.textContent = total.toFixed(2);
-
     var discountTotalElement = document.getElementById('discount-total');
     var discount = total * 0.5;
     discountTotalElement.textContent = discount.toFixed(2);
   }
-
-
     
     function submitOrder() {
     var name = document.getElementById('name').value;
@@ -122,7 +119,6 @@
       alert('Please enter a name.');
       return;
     }
-
     // Collect selected items and their quantities
     var selectedItems = [];
     var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
@@ -133,10 +129,8 @@
       var price = parseFloat(checkbox.value);
       selectedItems.push({ name: itemName, quantity: quantity, price: price });
     });
-
     var total = 0;
     var discountTotal = 0;
-
     selectedItems.forEach(function (item) {
       if (item.price < 0) {
         var discountPercentage = Math.abs(item.price);
@@ -146,18 +140,13 @@
         total += item.price * item.quantity;
       }
     });
-
     var commission = (total * 0.5).toFixed(2);
     var totalWithDiscount = total - discountTotal;
-
     alert('Order submitted!');
-
     var discordWebhookURL = 'https://discord.com/api/webhooks/1198701843073728652/M0zZTw-BNiNGRb9fWPialCDCRifLsLrcOHalGsQBtDcU9Cz8eHrUhC1nAvzERd6S6hGH';
-
     var xhr = new XMLHttpRequest();
     xhr.open('POST', discordWebhookURL, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
-
     var message = {
       content: 'New order!',
       embeds: [{
@@ -191,10 +180,8 @@
         ]
       }]
     };
-
     xhr.send(JSON.stringify(message));
   }
-
 function resetCalculator() {
   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
   var quantityInputs = document.querySelectorAll('input[type="number"]');
@@ -213,7 +200,6 @@ function resetCalculator() {
 	submitOrder();
 	resetCalculator();
 }
-
   </script>
 </head>
 <body>
@@ -224,11 +210,9 @@ function resetCalculator() {
   <h1>Menu Calculator</h1>
   
   <h2>Menu Items</h2>
-
   <div style="margin-bottom: 10px;"></div>
   
   <h3>Breakfast</h3>
-
   <div style="margin-bottom: 10px;"></div>
   
   <div>
@@ -250,7 +234,6 @@ function resetCalculator() {
   </div>
   
    <h3>Lunch</h3>
-
   <div style="margin-bottom: 10px;"></div>
   
   <div>
@@ -326,7 +309,6 @@ function resetCalculator() {
   </div>
  
    <h3>Dessert</h3>
-
   <div style="margin-bottom: 10px;"></div>
   
  <div>
@@ -334,7 +316,6 @@ function resetCalculator() {
     <label for="Davechoice">Carrot Cake - $</label>250
     <input type="number" value="1" min="1">
   </div>
-
  <div>
     <input type="checkbox" id="Davechoice" value="250$">
     <label for="Davechoice">Cheese Cake - $</label>250
@@ -364,10 +345,8 @@ function resetCalculator() {
     <label for="Davechoice">Icecream cones - $</label>250
     <input type="number" value="1" min="1">
   </div>
-
   
    <h3> Drinks</h3>
-
   <div style="margin-bottom: 10px;"></div>
   
   <div>
@@ -399,8 +378,6 @@ function resetCalculator() {
     <label for="Velmachoice">Coffee- $</label>150
     <input type="number" value="1" min="1">
   </div>
-
-
    
   <h3>Specials</h3>
    <div>
@@ -412,7 +389,6 @@ function resetCalculator() {
 <div style="margin-bottom: 10px;"></div>
   
   <h3> Discount Items</h3> 
-
 <div>
   <input type="checkbox" id="50off" value="-50%">
   <label for="50off">Employee Discount - 50% off</label>
@@ -426,8 +402,8 @@ function resetCalculator() {
 </div>
 
 <div>
-  <input type="checkbox" id="25off" value="-25%">
-  <label for="25off">Valentine Special - 25% off</label>
+  <input type="checkbox" id="10off" value="-10%">
+  <label for="10off">Valentine Special - 10% off</label>
   <input type="number" value="1" min="1" max="1">
 </div>
 
@@ -439,17 +415,13 @@ function resetCalculator() {
     <input type="number" value="1" min="1">
   </div>
   
-
   
   <div style="margin-bottom: 25px;"></div>
-
-
 <div>
     <label for="name">Cashier's Name:</label>
     <input type="text" id="name">
   </div>
   
-
 <div style="margin-bottom: 25px;"></div>
  
 <div class="total-box">
@@ -460,11 +432,9 @@ function resetCalculator() {
   
   <div style="margin-bottom: 45px;"></div>
   
-
   <button class="calculate-button" onclick="calculateTotal()">Calculate Total</button>
   <button class="submit-button" onclick="submitAndReset()">Submit Order</button>
   <button class="reset-button" onclick="resetCalculator()">Reset</button>
-
  
   
   
