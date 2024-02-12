@@ -93,16 +93,17 @@
       var price = parseFloat(checkbox.value);
 
       if (checkbox.value === '-10%') {
-        var itemPrice = total * 0.1;
+        var itemPrice = total * 0.10;
         total -= itemPrice;
       } else if (checkbox.value === '-30%') {
-        var itemPrice = total * 0.3;
+        var itemPrice = total * 0.30;
         total -= itemPrice;
       } else if (checkbox.value === '-50%') {
-        var itemPrice = total * 0.5;
+        var itemPrice = total * 0.50;
         total -= itemPrice;
       } else {
-        total += price * quantity;
+       
+	total += price * quantity;
       }
     });
 
