@@ -1,3 +1,4 @@
+
 <html>
 <head>
   <title>Menu Calculator</title>
@@ -91,17 +92,14 @@
       var quantity = parseInt(quantityInput.value);
       var price = parseFloat(checkbox.value);
 
-      if (checkbox.value === '-25%') {
-        var itemPrice = total * 0.25;
+      if (checkbox.value === '-10%') {
+        var itemPrice = total * 0.1;
         total -= itemPrice;
       } else if (checkbox.value === '-30%') {
         var itemPrice = total * 0.3;
         total -= itemPrice;
       } else if (checkbox.value === '-50%') {
         var itemPrice = total * 0.5;
-        total -= itemPrice;
-      } else if (checkbox.value === '-10%') {
-        var itemPrice = total * 0.1;
         total -= itemPrice;
       } else {
         total += price * quantity;
