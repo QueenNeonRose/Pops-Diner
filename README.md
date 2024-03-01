@@ -401,17 +401,11 @@ function resetCalculator() {
   <input type="number" value="1" min="1" max="1">
 </div>
 
-<div>
-  <input type="checkbox" id="10off" value="-10%">
-  <label for="10off">Valentine Special - 10% off</label>
-  <input type="number" value="1" min="1" max="1">
-</div>
-
 <h3> Delivery </h3>
   
   <div>
-    <input type="checkbox" id="ColinChoice" value="1000"><!--The price is the value, change that and then the name and itll change on the menu-->
-    <label for="ColinChoice">Delivery Fee - $</label>1000
+    <input type="checkbox" id="ColinChoice" value="5000"><!--The price is the value, change that and then the name and itll change on the menu-->
+    <label for="ColinChoice">Delivery Fee - $</label>5000
     <input type="number" value="1" min="1">
   </div>
   
